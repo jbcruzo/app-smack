@@ -15,6 +15,8 @@
 		D107320A20CF5230001E8725 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D107320920CF522F001E8725 /* SWRevealViewController.m */; };
 		D107320C20CF6B68001E8725 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D107320B20CF6B68001E8725 /* GradientView.swift */; };
 		D16CA63420D18A0C006F1D6B /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16CA63320D18A0C006F1D6B /* CreateAccountVC.swift */; };
+		D1BACF4C20D9B4770007B498 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BACF4B20D9B4770007B498 /* AuthService.swift */; };
+		D1BACF4E20D9D9190007B498 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BACF4D20D9D9190007B498 /* RoundedButton.swift */; };
 		D1C6D95F20CDE0210027BA71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C6D95E20CDE0210027BA71 /* AppDelegate.swift */; };
 		D1C6D96420CDE0210027BA71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1C6D96220CDE0210027BA71 /* Main.storyboard */; };
 		D1C6D96620CDE0220027BA71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1C6D96520CDE0220027BA71 /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 		D107320920CF522F001E8725 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		D107320B20CF6B68001E8725 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		D16CA63320D18A0C006F1D6B /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		D1BACF4B20D9B4770007B498 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		D1BACF4D20D9D9190007B498 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		D1C6D95B20CDE0200027BA71 /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1C6D95E20CDE0210027BA71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1C6D96320CDE0210027BA71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				D107320B20CF6B68001E8725 /* GradientView.swift */,
+				D1BACF4D20D9D9190007B498 /* RoundedButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,6 +118,14 @@
 				D107320720CF522E001E8725 /* Smack-Bridging-Header.h */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D1BACF4A20D9B3BD0007B498 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D1BACF4B20D9B4770007B498 /* AuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		D1C6D95220CDE0200027BA71 = {
@@ -136,6 +149,7 @@
 		D1C6D95D20CDE0200027BA71 /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				D1BACF4A20D9B3BD0007B498 /* Services */,
 				D1035B6F20D0826800864191 /* Utilities */,
 				D107320120CF2866001E8725 /* Model */,
 				D107320020CF285B001E8725 /* View */,
@@ -270,8 +284,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D107320320CF2891001E8725 /* ChatVC.swift in Sources */,
+				D1BACF4E20D9D9190007B498 /* RoundedButton.swift in Sources */,
 				D107320520CF28A8001E8725 /* ChannelVC.swift in Sources */,
 				D16CA63420D18A0C006F1D6B /* CreateAccountVC.swift in Sources */,
+				D1BACF4C20D9B4770007B498 /* AuthService.swift in Sources */,
 				D107320C20CF6B68001E8725 /* GradientView.swift in Sources */,
 				D1C6D95F20CDE0210027BA71 /* AppDelegate.swift in Sources */,
 				D107320A20CF5230001E8725 /* SWRevealViewController.m in Sources */,
