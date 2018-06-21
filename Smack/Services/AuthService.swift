@@ -83,7 +83,7 @@ class AuthService {
                 }
 
                 
-// Using SwiftyJSON (No lo deje de esta manera porque estaba marcando un error que dice: Call can throw, but it is marked with 'try' and the error is not handled.)
+// Using SwiftyJSON (No lo deje de esta manera porque estaba marcando un error que dice: Call can throw, but it is marked with 'try' and the error is not handled. El cual al parecer puede ser resuleto asi: let json = try! JSON(data: data))
 //                guard let data = response.data else { return }
 //                let json = JSON(data: data)
 //                self.userEmail = json["user"].stringValue
@@ -97,4 +97,43 @@ class AuthService {
             }
         }
     }
+    
+    func createUser(name: String, email: String, avatarName: String, avatarColor: String, completion: @escaping CompletionHandler){
+        
+        let lowerCaseEmail = email.lowercased()
+        
+        let body: [String: Any] = [
+            "name": name,
+            "email": lowerCaseEmail,
+            "avatarName": avatarName,
+            "avatarColor": avatarName
+        ]
+        
+        let header = [
+            "Authorization": "Bearer \(AuthService.instance.authToken)",
+            "Content-Type": "application/json; charset=utf-8"
+        ]
+        
+        Alamofire.request(URL_USER_ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
+            
+            if response.result .error == nil {
+                guard let data = response.data else {return}
+                let json = try! JSON(data: data)
+                let id = json["_id"].stringValue
+                let color = json["avatarColor"].stringValue
+                let avatarName = json["avatarName"].stringValue
+                let email = json["email"].stringValue
+                let name = json["name"].stringValue
+                
+                UserDataService.instance.setUserData(id: id, color: color, avatarName: avatarName, email: email, name: name)
+                
+                completion(true)
+                
+            } else {
+                completion(false)
+                debugPrint(response.result.error as Any)
+            }
+        }
+    }
+    
 }
