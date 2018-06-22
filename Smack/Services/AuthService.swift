@@ -106,7 +106,7 @@ class AuthService {
             "name": name,
             "email": lowerCaseEmail,
             "avatarName": avatarName,
-            "avatarColor": avatarName
+            "avatarColor": avatarColor
         ]
         
         let header = [
