@@ -230,6 +230,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginPressed:" destination="bGE-gi-7vQ" eventType="touchUpInside" id="Zcg-O2-8tj"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="0Gf-vs-qAN">
                                 <rect key="frame" x="62" y="188" width="250" height="94"/>
@@ -289,9 +292,14 @@ sign i</string>
                                     <action selector="createAccountBtnPressed:" destination="bGE-gi-7vQ" eventType="touchUpInside" id="T71-qy-oBs"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="nPh-wt-b2B">
+                                <rect key="frame" x="169" y="215" width="37" height="37"/>
+                                <color key="color" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="nPh-wt-b2B" firstAttribute="centerX" secondItem="2hn-SC-17x" secondAttribute="centerX" id="1cc-Ne-57k"/>
                             <constraint firstItem="zfe-fc-Lw4" firstAttribute="centerX" secondItem="2hn-SC-17x" secondAttribute="centerX" id="4Wb-4r-Jp3"/>
                             <constraint firstItem="sk5-32-ge1" firstAttribute="centerX" secondItem="2hn-SC-17x" secondAttribute="centerX" id="702-ps-dlQ"/>
                             <constraint firstItem="Djh-xd-OgI" firstAttribute="top" secondItem="hQE-6L-nnW" secondAttribute="top" constant="1" id="81O-q8-Jb0"/>
@@ -305,10 +313,14 @@ sign i</string>
                             <constraint firstItem="ByF-YK-9eU" firstAttribute="centerX" secondItem="2hn-SC-17x" secondAttribute="centerX" id="WjN-7W-aLV"/>
                             <constraint firstItem="0Gf-vs-qAN" firstAttribute="top" secondItem="zfe-fc-Lw4" secondAttribute="bottom" constant="60" id="cOe-LH-O6a"/>
                             <constraint firstItem="hQE-6L-nnW" firstAttribute="trailing" secondItem="ByF-YK-9eU" secondAttribute="trailing" constant="53" id="fZu-Mw-Go8"/>
+                            <constraint firstItem="nPh-wt-b2B" firstAttribute="centerY" secondItem="2hn-SC-17x" secondAttribute="centerY" constant="-100" id="sPA-yM-ZLS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hQE-6L-nnW"/>
                     </view>
                     <connections>
+                        <outlet property="passwordTxt" destination="9V5-0m-kOI" id="G4z-Q7-rKF"/>
+                        <outlet property="spinner" destination="nPh-wt-b2B" id="Z22-eB-mYz"/>
+                        <outlet property="usernameTxt" destination="DSX-Dx-Eb7" id="0f6-Dm-V7L"/>
                         <segue destination="lpU-I3-Khb" kind="show" identifier="toCreateAccount" id="COa-n8-VNA"/>
                     </connections>
                 </viewController>
